@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
-from .views import list_books, LibraryDetailView, LoginView, LogoutView, RegisterView
-from django.contrib.auth import views as auth_views
+from .views import list_books, LibraryDetailView, RegisterView
+from django.contrib.auth.views import LoginView, LogoutView
 
 
 urlpatterns = [
@@ -9,7 +9,7 @@ urlpatterns = [
     path("library/<int:pk>/", LibraryDetailView.as_view(), name="library_detail"),
     path('login/', LoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
-    path('register/', RegisterView.as_view, name='register'),
+    path('register/', RegisterView.as_view(), name='register'),
 ]
 
 
