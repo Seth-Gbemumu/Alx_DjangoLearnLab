@@ -30,7 +30,7 @@ class LogoutView(LogoutView):
     template_name = 'logout.html'
     next_page = reverse_lazy('login')
 
-class RegisterView(CreateView):
+class Register(CreateView):
     form_class = UserCreationForm
     template_name = 'register.html'
     success_url = reverse_lazy('login')
