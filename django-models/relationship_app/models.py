@@ -31,10 +31,9 @@ class Librarian(models.Model):
         return self.name
     
 ROLE_CHOICES = (
-    ("Admin", "Admin"),
-    ("Librarian", "Librarian"),
-    ("Member", "Member"),
-
+    ('Admin', 'Admin'),
+    ('Librarian', 'Librarian'),
+    ('Member', 'Member'),
 )
 
 class UserProfile(models.Model):
@@ -43,7 +42,7 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - {self.role}"
-    
+
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
     if created:
