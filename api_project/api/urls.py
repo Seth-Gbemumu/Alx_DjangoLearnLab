@@ -5,7 +5,7 @@ from .views import BookListAPIView
 
 
 router = DefaultRouter()
-router.register(r'Book', BookListAPIView)
+router.register(r'book', BookListAPIView)
 
 urlpatterns = [
 
