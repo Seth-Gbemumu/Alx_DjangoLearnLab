@@ -9,5 +9,5 @@ router.register(r'book', BookListAPIView)
 
 urlpatterns = [
 
-    path('api/', include(router.urls)),
+    path('api/', include(router.api.urls)),
 ]
